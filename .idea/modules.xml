@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cat.mvm.modular.contracts/cat.mvm.modular.contracts.iml" filepath="$PROJECT_DIR$/cat.mvm.modular.contracts/cat.mvm.modular.contracts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cat.mvm.modular.entities/cat.mvm.modular.entities.iml" filepath="$PROJECT_DIR$/cat.mvm.modular.entities/cat.mvm.modular.entities.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cat.mvm.modular.ui/cat.mvm.modular.ui.iml" filepath="$PROJECT_DIR$/cat.mvm.modular.ui/cat.mvm.modular.ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modular.iml" filepath="$PROJECT_DIR$/modular.iml" />
+    </modules>
+  </component>
+</project>
