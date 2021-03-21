@@ -3,6 +3,7 @@ package cat.mvm.modular.ui;
 import cat.mvm.modular.contracts.LoveCalculator;
 import cat.mvm.modular.entities.BasicLoveCalculator;
 import cat.mvm.modular.entities.RandomLoveCalculator;
+import cat.mvm.modular.entities.Space;
 
 import java.util.Random;
 
@@ -25,5 +26,10 @@ public class Application {
         };
         System.out.println(lc.sayHello("Josep", "Maria"));
         System.out.println(lc3.sayHello("Josep", "Maria"));
+
+        Space<Integer> spaceInt = new Space<Integer>(0,0,1920, 1280);
+        Space<Double> spaceDoub = new Space<Double>(0.0,0.0,50.0, 75.5);
+        System.out.println(spaceInt);
+        System.out.println(spaceDoub);
     }
 }
