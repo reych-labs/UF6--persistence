@@ -8,8 +8,11 @@ public interface LoveCalculator {
     public static final int MAX_VALUE = 100;
     public static final int MIN_VALUE = 0;
 
-    public abstract int getCompatibilityBetween(String name1, String name2); //interface funcional (SAM - Single Abstract Method)
+    public abstract String sayHello(String name1, String name2);//interface funcional (SAM - Single Abstract Method)
 
+    public default int getCompatibilityBetween(String name1, String name2){
+        return 1;
+    }
     /**
      * defender method
      * els tipus fills no estan obligats a sobreescriure'ls
@@ -20,7 +23,7 @@ public interface LoveCalculator {
 
     /**
      * mètode auxiliar
-     * @param bound
+     * @param bound valor màxim per generar l'objecte random
      * @return int
      */
     private int nextInt(int bound){
@@ -30,7 +33,7 @@ public interface LoveCalculator {
 
     /**
      * Utility method
-     * @param name
+     * @param name nom a normalitzar
      * @return String
      */
     public static String normalize(String name){

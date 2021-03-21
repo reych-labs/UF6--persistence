@@ -15,5 +15,15 @@ public class Application {
 
         var lc2 = new BasicLoveCalculator();
         System.out.println(lc2.getCompatibilityBetween("Josep", "Maria"));
+
+        LoveCalculator lc = (name1, name2) -> String.format("Hola %s i %s", name1, name2);
+        var lc3 = new LoveCalculator() {
+            @Override
+            public String sayHello(String name1, String name2) {
+                return String.format("Hola %s i %s", name1, name2);
+            }
+        };
+        System.out.println(lc.sayHello("Josep", "Maria"));
+        System.out.println(lc3.sayHello("Josep", "Maria"));
     }
 }
