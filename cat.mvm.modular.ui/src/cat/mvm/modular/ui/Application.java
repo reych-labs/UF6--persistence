@@ -1,8 +1,6 @@
 package cat.mvm.modular.ui;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Application {
     public static void main(String[] args){
@@ -35,6 +33,18 @@ public class Application {
             System.out.println("Introdueix un nom");
             names.add(sc.next());
         }
-        names.forEach(e-> System.out.println(e)); //names.forEach(System.out::println);
+        //fem una crida al mètode de la Helper Class Collections - Amb classe anònima
+        /*Collections.sort(names, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.length() - o2.length();
+            }
+        });
+*/
+        Collections.sort(names, (o1, o2) ->  o1.length() - o2.length());
+        for (var n: names) {
+            System.out.println(n);
+        }
+        names.forEach(e -> System.out.println(e)); //names.forEach(System.out::println);
     }
 }
