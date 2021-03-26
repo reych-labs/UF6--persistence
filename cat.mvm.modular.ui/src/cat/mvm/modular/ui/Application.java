@@ -1,15 +1,12 @@
 package cat.mvm.modular.ui;
 
-import cat.mvm.modular.contracts.LoveCalculator;
-import cat.mvm.modular.entities.BasicLoveCalculator;
-import cat.mvm.modular.entities.RandomLoveCalculator;
-import cat.mvm.modular.entities.Space;
-
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Application {
     public static void main(String[] args){
-        var lc1 = new RandomLoveCalculator();
+        /*var lc1 = new RandomLoveCalculator();
         System.out.println(LoveCalculator.normalize("Alamán"));
         System.out.println(LoveCalculator.normalize("García"));
         System.out.println(lc1.getCompatibilityBetween("Josep", "Maria"));
@@ -30,6 +27,14 @@ public class Application {
         Space<Integer> spaceInt = new Space<Integer>(0,0,1920, 1280);
         Space<Double> spaceDoub = new Space<Double>(0.0,0.0,50.0, 75.5);
         System.out.println(spaceInt);
-        System.out.println(spaceDoub);
+        System.out.println(spaceDoub);*/
+
+        List<String> names = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
+        for(int i=0; i<5; i++) {
+            System.out.println("Introdueix un nom");
+            names.add(sc.next());
+        }
+        names.forEach(e-> System.out.println(e)); //names.forEach(System.out::println);
     }
 }
