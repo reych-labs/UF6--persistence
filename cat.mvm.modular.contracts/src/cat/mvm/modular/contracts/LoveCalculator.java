@@ -38,7 +38,11 @@ public interface LoveCalculator {
      */
     public static String normalize(String name){
         // expressions regulars amb grups unicode amb Non-spacing mark
+        //https://www.compart.com/en/unicode/category/Mn
+        /*name = Normalizer.normalize(name, Normalizer.Form.NFD);
+        return name.replaceAll("\\p{Mn}", "");*/
         return normalizeNFD(name).replaceAll("\\p{Mn}", "");
+
     }
 
     private static String normalizeNFD(String name){
