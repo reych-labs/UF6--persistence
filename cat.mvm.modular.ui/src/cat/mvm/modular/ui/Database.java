@@ -26,6 +26,30 @@ public class Database {
             }catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
+            
+            sql = "UPDATE base_datos SET edat=? WHERE usuari = ?";
+            pstatement = null;
+            usuari = "reych";
+            edat = 19;
+
+            try {
+                pstatement = connection.prepareStatement(sql);
+                pstatement.setString(1, usuari);
+                pstatement.setString(2, pwd);
+                pstatement.setInt(3, edat);
+                pstatement.setString(4, correu);
+                pstatement.executeUpdate();
+            } catch (SQLException sqle) {
+                sqle.printStackTrace();
+            } finally {
+                //Nos aseguramos de cerrar los recursos abiertos
+                if (pstatement != null)
+                    try {
+                        pstatement.close();
+                    } catch (SQLException sqle) {
+                        sqle.printStackTrace();
+                    }
+            }
 
             sql = "SELECT * FROM usuaris";
 
